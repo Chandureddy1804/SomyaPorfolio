@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sowmya K | Portfolio</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"/>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #121212, #1e1e2f);
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background: #f0f0f0;
+      color: #000;
+       
+    }
+    body.light-mode header h1 {
+        color:#34d5eb;
+        text-shadow: 0 0 3px #0ef;
+    }
+    #toggleTheme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0ef;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 999;
+    }
+    #landing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      font-size: 2.5rem;
+      color: #0ef;
+      animation: typing 2s steps(25), blink 0.5s step-end infinite alternate;
+      overflow: hidden;
+      white-space: nowrap;
+      /* border-right: 4px solid #0ef; */
+      width: 0;
+      margin: auto;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    #portfolio {
+      display: none;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #0ef;
+      text-shadow: 0 0 3px #0ef;
+    }
+    section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    body.light-mode section {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    h2 {
+      color: #0ef;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    h2:hover {
+      transform: scale(1.05);
+    }
+    ul {
+      list-style: none;
+      padding-left: 1em;
+    }
+    li {
+      margin: 8px 0;
+      transition: transform 0.3s, color 0.3s;
+      position: relative;
+      padding-left: 20px;
+    }
+    li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: #0ef;
+    }
+    li:hover {
+      transform: translateX(5px);
+      color: #0ef;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin: 40px auto 0;
+      padding: 12px 30px;
+      background: #0ef;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .resume-btn:hover {
+      background: #08d;
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #0ef;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.3);
+      color: #08d;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0ef;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      transition: background 0.3s;
+    }
+    .back-to-top:hover {
+      background: #08d;
+    }
+    .icon-title i {
+      color: #0ef;
+    }
+    header:hover {
+  transform: translateY(-5px) scale(1.02);
+  color: rgb(14, 189, 237);
+  text-shadow: 0 2px 10px rgba(0, 255, 255, 0.5);
+}
+section#about li {
+  list-style: none;
+  padding-left: 3;
+}
+
+
+  </style>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    setTimeout(() => {
+      document.getElementById("landing").style.display = "none";
+      document.getElementById("portfolio").style.display = "block";
+    }, 3000);
+
+    window.addEventListener('scroll', () => {
+      const btn = document.querySelector('.back-to-top');
+      if (window.scrollY > 200) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <div id="toggleTheme" onclick="toggleTheme()">Toggle Theme</div>
+ 
+  
+  <div id="landing">Hi, I'm <strong style="color:#fff;">Sowmya K</strong> — Aspiring Developer</div>
+  
+  <div id="portfolio">
+    <header>
+      <h1>Sowmya K</h1>
+      <p>Electronics & Communication Engineer | Python & Web Developer | Telangana, India</p>
+    </header>
+  
+    <section id="about">
+      <h2><i class="fas fa-user"></i>About Me</h2>
+      <li><strong>Motivated and detail-oriented ECE student seeking an entry-level role in tech. Passionate about building practical solutions using Python and web development technologies (HTML, CSS, JavaScript).</strong>
+    </section>
+  
+    <section id="education">
+      <h2><i class="fa-solid fa-user-graduate"></i> Education</h2>
+      <ul>
+        <li><strong>B.Tech in Electronics and Communication Engineering</strong> — Vignan Institute of Technology and Science (Pursuing)</li>
+        <li><strong>Diploma in ECE</strong> — Govt. Polytechnic for Women, Jogipet (2019–2022), CGPA: 8.0</li>
+        <li><strong>SSC</strong> — Telangana Model School, Shankarampet (2018–2019), CGPA: 9.3</li>
+      </ul>
+    </section>
+  
+    <section id="projects">
+      <h2><i class="fas fa-project-diagram"></i>Projects</h2>
+      <ul>
+        <li><strong>Colour Blindness Detection Game</strong> — Maze game to detect vision using shade differentiation.</li>
+        <li><strong>Turbidity Sensor & Arduino</strong> — Measures water quality using sensors and control instrumentation.</li>
+      </ul>
+    </section>
+  
+    <section id="skills">
+      <h2><i class="fas fa-lightbulb"></i>Skills</h2>
+      <ul>
+        <li><strong>Python Programming:</strong>
+          <ul>
+            <li>Data types, loops, and functions</li>
+            <li>File handling and exception management</li>
+            <li>Working with libraries like math, random, datetime</li>
+            <li>Basic object-oriented programming (OOP)</li>
+            <li>Simple data manipulation and logic building</li>
+          </ul>
+        </li>
+        <li><strong>Web Development:</strong>
+          <ul>
+            <li>HTML5: Semantic structure, forms, tables, multimedia integration</li>
+            <li>CSS3: Styling, flexbox, grid layout, media queries, animations</li>
+            <li>JavaScript:
+              <ul>
+                <li>DOM manipulation</li>
+                <li>Event handling</li>
+                <li>Functions and conditional logic</li>
+                <li>Creating interactive elements (e.g., toggles, forms)</li>
+                <li>Basics of ES6 syntax</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><strong>Tools & Platforms:</strong> Arduino IDE, Visual Studio Code, Notepad++, Git (basic)</li>
+        <li><strong>Core Subjects:</strong> Digital Electronics, Microcontrollers, Communication Systems</li>
+      </ul>
+    </section>
+
+    <section id="languages">
+      <h2><i class="fas fa-language"></i>Languages</h2>
+      <ul>
+        <li>English</li>
+        <li>Telugu</li>
+        <li>Hindi</li>
+      </ul>
+    </section>
+  
+  
+    <section id="hobbies">
+      <h2><i class="fas fa-heart"></i>Hobbies</h2>
+      <ul>
+        <li>Drawing</li>
+        <li>Reading Story Books</li>
+        <li>Listening to Music</li>
+      </ul>
+    </section>
+  
+    <div class="social-icons">
+      <a href="mailto:sowmyanetha2567@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+919014596206" title="Call"><i class="fas fa-phone"></i></a>
+    </div>
+  
+    <a href="." class="resume-btn" target="_blank">View Resume</a>
+  </div>
+  
+</div>
+
+  <div class="back-to-top" onclick="scrollToTop()">↑</div>
+</body>
+</html>
